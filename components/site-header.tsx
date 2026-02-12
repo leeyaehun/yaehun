@@ -15,7 +15,7 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-border">
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link
           href="/"
           className="font-serif text-lg tracking-tight text-foreground transition-colors hover:text-muted-foreground"
