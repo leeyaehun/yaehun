@@ -3,12 +3,13 @@ import { ArrowRight } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { writings, experiments } from "@/lib/data"
+import { experiments } from "@/lib/data"
+import { getAllWritings } from "@/lib/writings"
 import { LatestWritings } from "@/components/latest-writings"
 import { RecentExperiments } from "@/components/recent-experiments"
 
-export default function HomePage() {
-  const latestWritings = writings.slice(0, 5)
+export default async function HomePage() {
+  const latestWritings = (await getAllWritings()).slice(0, 5)
   const recentExperiments = experiments.slice(0, 3)
 
   return (

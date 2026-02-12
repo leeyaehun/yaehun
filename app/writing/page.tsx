@@ -1,14 +1,16 @@
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { LatestWritings } from "@/components/latest-writings"
-import { writings } from "@/lib/data"
+import { getAllWritings } from "@/lib/writings"
 
 export const metadata = {
   title: "Writing - Yaehun",
   description: "Essays and reflections on creativity, process, and structured thinking.",
 }
 
-export default function WritingPage() {
+export default async function WritingPage() {
+  const writings = await getAllWritings()
+
   return (
     <>
       <SiteHeader />

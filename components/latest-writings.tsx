@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import type { Writing } from "@/lib/data"
+import type { WritingMeta } from "@/lib/writings"
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {
@@ -10,7 +10,7 @@ function formatDate(dateStr: string) {
   })
 }
 
-export function LatestWritings({ writings }: { writings: Writing[] }) {
+export function LatestWritings({ writings }: { writings: WritingMeta[] }) {
   return (
     <ul className="flex flex-col">
       {writings.map((writing, index) => (
