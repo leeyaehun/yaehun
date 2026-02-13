@@ -8,6 +8,7 @@ const navItems = [
   { label: "Writing", href: "/writing" },
   { label: "Experiments", href: "/experiments" },
   { label: "About", href: "/about" },
+  { label: "Studio", href: "/studio" },
 ]
 
 export function SiteHeader() {
